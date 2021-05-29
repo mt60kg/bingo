@@ -1,3 +1,9 @@
+
+/* テキスト入力のスタイル */
+input.tex{
+    font-size: 18px;
+}
+
 /* カード全体のスタイル */
 #bingo{
     width: 340px;
@@ -28,12 +34,6 @@
 #bingo td.check {
     color: #000000;
     background-color: #FFA500;
-}
-
-/* 初期化 */
-#texEnt.click {
-    color: #000000;
-    background-color: #F0F0F0;
 }
 
 
