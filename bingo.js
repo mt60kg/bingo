@@ -9,7 +9,7 @@ var shuffle = ([...array]) => {
 
 $(function () {
     //ローカルストレージより読み出し
-    //$("#day").text(LocalStorage.getItem("date"));
+    $("#day").text(LocalStorage.getItem("date"));
     //クリックにて処理開始
     $("#texEnt").on('click', function () {
         //入力データの配列化
@@ -17,6 +17,11 @@ $(function () {
         $(".tex").each(function (i, obj) {
             val.push(obj.value);
         });
+        //シャッフル処理
+        var val2 = (shuffle(val));
+        for (var i = 0; i < val2.length; i++) {
+            $('#bi' + i).text(val2[i]);
+        };
         //時間データ取得
         var now = new Date();
         var y = now.getFullYear();
@@ -29,11 +34,6 @@ $(function () {
         var s = now.getSeconds();
         $("#day").text(y + '年' + m + '月' + d + '日' + h + '時' + mi + '分' + s + '秒' + '(' + wd[w] + ')');
         LocalStorage.setItem("date",now);
-        //シャッフル処理
-        var val2 = (shuffle(val));
-        for (var i = 0; i < val2.length; i++) {
-            $('#bi' + i).text(val2[i]);
-        };
     });
     // 番号をクリックすると、スタイルを変更するクラスをつけ外しできる
     $('#bingo td').click(function (){
