@@ -69,7 +69,7 @@ $(function () {
         var h = now.getHours();
         var mi = now.getMinutes();
         var s = now.getSeconds();
-        var nowtime = y + '年' + m + '月' + d + '日' + h + '時' + mi + '分' + s + '秒' + '(' + wd[w] + ')';
+        var nowtime = y + '年' + m + '月' + d + '日' + h + '時' + mi + '分' + '(' + wd[w] + ')';
         $("#day").text(nowtime);
         localStorage.setItem('nowtime',nowtime);
 
