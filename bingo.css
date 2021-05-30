@@ -13,6 +13,7 @@ input.tex{
 #bingo{
     width: 340px;
     margin: 10px;
+    table-layout: fixed;
 }
 
 /* B I N G Oと番号のスタイル */
@@ -20,6 +21,7 @@ input.tex{
 #bingo td {
     text-align: center;
     font-weight: normal;
+    overflow-wrap : break-word;
 }
 
 /* 番号のスタイルを設定 */
