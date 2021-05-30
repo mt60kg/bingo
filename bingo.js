@@ -78,5 +78,14 @@ $(function () {
     $('#bingo td').click(function (){
         $(this).toggleClass('check');
     });
+    // 画像保存
+    $('#tbload').click(function (){
+        html2canvas(document.querySelector("#bingo")).then(canvas => { 
+            let downloadEle = document.createElement("a");
+            downloadEle.href = canvas.toDataURL("image/png");
+            downloadEle.download = "bingo.png";
+            downloadEle.click();
+        });
+    });
 });
        
